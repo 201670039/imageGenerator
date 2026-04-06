@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 이미지 생성기 - 홈</title>
+    <style>
+        body { font-family: 'Pretendard', sans-serif; text-align: center; padding: 100px; background-color: #f8f9fa; }
+        .container { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); display: inline-block; }
+        h1 { color: #333; }
+        input { padding: 15px; width: 400px; border: 1px solid #ddd; border-radius: 10px; font-size: 16px; }
+        button { padding: 15px 30px; background-color: #007bff; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; margin-left: 10px; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🎨 AI Image Generator</h1>
+    <p>상상하는 이미지를 텍스트로 입력해보세요.</p>
+    <form action="/generate" method="GET">
+        <input type="text" name="prompt" placeholder="예: 우주에서 서핑하는 고양이" required>
+        <button type="submit">생성하기</button>
+    </form>
+</div>
+</body>
+</html>

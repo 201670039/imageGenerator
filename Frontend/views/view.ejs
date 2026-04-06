@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 이미지 생성 결과</title>
+    <style>
+        body { font-family: 'Pretendard', sans-serif; text-align: center; padding: 50px; background-color: #f8f9fa; }
+        .result-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: inline-block; }
+        img { max-width: 600px; border-radius: 15px; margin: 20px 0; border: 1px solid #eee; }
+        .btn-back { display: inline-block; padding: 12px 25px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 10px; margin-top: 20px; }
+        .prompt-text { font-style: italic; color: #555; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+<div class="result-card">
+    <h2>✨ 생성된 이미지</h2>
+    <p class="prompt-text">"<%= prompt %>"</p>
+
+    <% if (imageUrl) { %>
+        <img src="<%= imageUrl %>" alt="AI Generated Image">
+    <% } else { %>
+        <p style="color: red;">이미지를 불러오는 데 실패했습니다.</p>
+    <% } %>
+
+    <br>
+    <a href="/" class="btn-back">← 다시 만들기</a>
+</div>
+</body>
+</html>
